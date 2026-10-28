@@ -1,0 +1,27 @@
+:root{
+    --cinza: #474747ab;
+    --fundo: #ece0a9;
+}
+
+body{
+    
+    background-color: var(--fundo);
+}
+
+h1 {
+
+  color: var(--cinza);
+  text-align: center;
+  font-family: "Eagle Lake", serif;
+  border-bottom: 2px solid var(--cinza);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 50px;
+  text-align: center;
+}
+
+.ada_h1{
+    
+}
