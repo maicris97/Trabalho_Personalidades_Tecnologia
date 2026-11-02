@@ -1,6 +1,6 @@
 :root{
-    --cinza: #474747ab;
-    --fundo: #ece0a9;
+    --titulo: #cf3d3dab;
+    --fundo: #ffff;
 }
 
 body{
@@ -10,18 +10,13 @@ body{
 
 h1 {
 
-  color: var(--cinza);
+  color: var(--titulo);
   text-align: center;
   font-family: "Eagle Lake", serif;
-  border-bottom: 2px solid var(--cinza);
+  border-bottom: 2px solid var(--titulo);
 }
-
-nav ul {
+nav{
   list-style-type: none;
   padding: 50px;
   text-align: center;
-}
-
-.ada_h1{
-    
 }
