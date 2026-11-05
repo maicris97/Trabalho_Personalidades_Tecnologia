@@ -77,7 +77,7 @@ body {
 /* Menu de botões para Ada e Alan */
 .flexbox {
     display: flex; /*O display: flex coloca todos os elementos filhos (os botões) lado a lado automaticamente, em uma mesma linha.*/
-    justify-content: center; /*Centraliza os botões horizontalmente no meio da tela.*/
+    justify-content: left; /*Centraliza os botões horizontalmente no meio da tela.*/
     gap: 15px; /*Define o espaço/distância entre os botões.A vantagem do gap é que ele só coloca espaço entre os elementos, sem criar margens desnecessárias nas pontas.*/
     flex-wrap: wrap; /*Permite que os botões quebrem para a próxima linha se faltar espaço na tela. Acessível para celulares com telas muito estreitas.*/
     margin-bottom: 30px;
