@@ -1,22 +1,287 @@
-:root{
-    --titulo: #cf3d3dab;
-    --fundo: #ffff;
+/* ==========================================================
+   RESET E ESTILOS BASE
+   ========================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    
-    background-color: var(--fundo);
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #f1f5f9;
+    line-height: 1.6; /*Define a altura da linha (o espaçamento vertical entre as linhas de um parágrafo).Isso evita que os textos fiquem "sufocados" ou grudados demais, melhorando a leitura.*/
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #0f172a;
+    background-attachment: fixed; /*Fixa a imagem de fundo na tela.Quando o usuário rola a página (dá scroll para baixo), o texto se move normalmente, mas a imagem de fundo fica "travada" e imóvel.*/
+    background-size: cover; /*Ajusta o tamanho da imagem de fundo para cobrir toda a tela.O valor cover faz com que a imagem estique ou encolha de forma proporcional para preencher 100% do espaço do fundo sem esticar/deformar a foto.*/
+    background-position: center; /*Define o ponto de alinhamento da imagem de fundo.Garante que o centro da imagem fique posicionado no centro exato da tela, evitando que áreas importantes da foto fiquem cortadas em monitores diferentes.*/
 }
 
-h1 {
-
-  color: var(--titulo);
-  text-align: center;
-  font-family: "Eagle Lake", serif;
-  border-bottom: 2px solid var(--titulo);
+/* Fundos por página */
+/*linear-gradient:Cria uma película/máscara escura transparente colocada por cima da imagem.Se colocarmos uma foto normal de fundo, o texto que fica em cima pode ficar difícil de ler.*/
+.body-home {
+    background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                      url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80');
 }
-nav{
-  list-style-type: none;
-  padding: 50px;
-  text-align: center;
+
+.body-ada {
+    background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                      url('https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1600&q=80');
+}
+
+.body-alan {
+    background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                      url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80');
+}
+
+/* ==========================================================
+   CABEÇALHOS E NAVEGAÇÃO
+   ========================================================== */
+.header {
+    text-align: center;
+    background-color: rgba(30, 41, 59, 0.85);
+    border: 1px solid rgba(51, 65, 85, 0.8);
+    border-radius: 12px;
+    padding: 25px 15px;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    color: #38bdf8;
+    font-size: 2.2rem; /*A unidade rem é relativa ao tamanho de fonte padrão do navegador (que geralmente é de 16px).2.2rem equivale a 2.2 x 16px = 35.2px*/
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-top: 8px;
+    font-size: 1.05rem;
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+/* Menu de botões para Ada e Alan */
+.flexbox {
+    display: flex; /*O display: flex coloca todos os elementos filhos (os botões) lado a lado automaticamente, em uma mesma linha.*/
+    justify-content: center; /*Centraliza os botões horizontalmente no meio da tela.*/
+    gap: 15px; /*Define o espaço/distância entre os botões.A vantagem do gap é que ele só coloca espaço entre os elementos, sem criar margens desnecessárias nas pontas.*/
+    flex-wrap: wrap; /*Permite que os botões quebrem para a próxima linha se faltar espaço na tela. Acessível para celulares com telas muito estreitas.*/
+    margin-bottom: 30px;
+}
+
+.nav-card a {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none; /*Remove o sublinhado padrão dos links.*/
+    font-weight: bold;
+    transition: background-color 0.2s ease; /*Cria uma animação suave ao passar o mouse.Quando você passa o mouse por cima do botão e a cor muda no hover, essa mudança não acontece de forma seca instantânea; ela leva 0.2 segundos para deslizar suavemente (ease), tornando a navegação mais fluida.*/
+}
+
+.nav-card a:hover {
+    background-color: #7dd3fc;
+}
+
+/* ==========================================================
+   ESTILOS PÁGINA INICIAL (CARDS GRANDES)
+   ========================================================== */
+.home-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /*Estica os cartões para que eles tenham exatamente a mesma altura.Mesmo que um cartão tenha mais texto do que o outro cartão, essa regra faz com que a caixa mais curta estique para ficar no mesmo tamanho da caixa mais alta. Isso deixa o design simétrico e profissional.*/
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.big-card {
+    background-color: rgba(30, 41, 59, 0.9);
+    border: 1px solid rgba(51, 65, 85, 0.8);
+    border-radius: 16px;
+    width: 380px;
+    text-decoration: none;
+    color: inherit; /*Faz o cartão herdar a cor do texto do pai (body).Impede que o link force a cor azul padrão dos links do navegador nos textos internos (como títulos e parágrafos do card).*/
+    overflow: hidden; /*Corta qualquer conteúdo que saia dos limites do cartão.Crucial para a imagem do topo. Como o cartão tem cantos arredondados, sem o overflow: hidden a imagem quadrada vazaria por cima das pontas arredondadas.*/
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease; /*Prepara a animação suave para o efeito de passar o mouse.*/
+}
+
+.big-card:hover {
+    transform: translateY(-6px); /*Move o cartão para cima no eixo vertical.É uma propriedade de transformação 2D que movimenta o elemento para cima ou para baixo.Valores negativos movem para cima, então -6px faz o cartão "flutuar" 6px para cima.*/
+    border-color: #38bdf8; /*Isso cria a sensação de que o cartão "acendeu" ou ganhou foco assim que o usuário passa o mouse por cima.*/
+}
+
+.card-image-wrapper { /*moldura*/
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #0f172a; /*Caso a imagem demore alguns milissegundos para carregar ou o link falhe, o usuário verá um bloco escuro elegante em vez de um espaço em branco quebrado.*/
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*É uma das propriedades CSS mais úteis para imagens. O valor cover faz com que a imagem preencha todo o espaço mantendo a sua proporção original, sem achatar nem esticar a foto. Se a imagem não tiver a mesma proporção da moldura, o CSS corta suavemente as sobras nas pontas para não deformar o rosto do personagem.*/
+    object-position: top; /*Como a propriedade object-fit: cover pode cortar pedaços da imagem para ajustar ao tamanho, o object-position: top avisa ao navegador: "dê prioridade para a parte de cima da foto!". Isso é essencial para retratos de pessoas, pois garante que o rosto do personagem nunca seja cortado, mantendo o topo da cabeça sempre visível.*/
+}
+
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /*É a propriedade responsável por manter os dois cartões alinhados. Como configuramos o contêiner pai para esticar (align-items: stretch), o flex-grow: 1 diz ao .card-content: "Se o cartão do lado for maior porque tem mais texto, estique esta caixa de texto até ocupar todo o espaço restante". Isso garante que o rodapé e os botões dos dois cartões fiquem alinhados na mesma altura.*/
+}
+
+.card-content h2 {
+    color: #38bdf8;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    border-bottom: none;
+    padding-bottom: 0;
+    /*Se você tiver um estilo global no seu style.css que coloca uma borda embaixo de todos os <h2> do site, essas duas linhas "cancelam" essa borda especificamente nos títulos dos cartões da página inicial, mantendo o visual limpo.*/
+}
+
+.badge { /*etiquetas/tags*/
+    display: inline-block;
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+    width: fit-content; /*faz com que a etiqueta tenha apenas o tamanho exato do texto interno mais o padding, sem esticar até a borda do cartão.*/
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn-card {
+    background-color: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* ==========================================================
+   ESTILOS DAS PÁGINAS DA ADA E DO ALAN
+   ========================================================== */
+.main-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-section {
+    background-color: rgba(30, 41, 59, 0.85);
+    border: 1px solid rgba(51, 65, 85, 0.8);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.hero-card {
+    text-align: center;
+}
+
+.profile-image {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #38bdf8;
+    margin-bottom: 10px;
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+h2 {
+    color: #38bdf8;
+    border-bottom: 2px solid rgba(51, 65, 85, 0.8);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+h3 {
+    color: #63cae9;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+p, li {
+    color: #e2e8f0;
+    font-size: 0.98rem;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+strong {
+    color: #ffffff;
+}
+
+/* Linha do Tempo */
+.timeline { /*Cria o eixo vertical da linha do tempo.*/
+    border-left: 3px solid #38bdf8;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.timeline-item {
+    position: relative; /*Permite que pseudo-elementos como ::before ou ::after (usados para desenhar os "pontos" ou bolinhas no eixo ciano) sejam posicionados de forma absoluta (position: absolute) com relação a este bloco específico, sem que escapem para a página inteira.*/
+    margin-bottom: 20px;
+}
+
+/*Esse bloco utiliza o pseudo-elemento ::before para criar o marcador circular ("bolinha neon") sobre a linha vertical da timeline, encaixando perfeitamente cada evento histórico no eixo.*/
+.timeline-item::before {
+    content: ""; /*Sem a propriedade content, o navegador ignora o ::before. Definir como uma string vazia "" cria um container transparente pronto para receber dimensões e cor.*/
+    position: absolute; /*Descola a bolinha do fluxo normal de texto e permite o posicionamento exato. Toma como referência o container pai (.timeline-item), que tem position: relative;.*/
+    left: -27px; /*Alinha a bolinha exatamente sobre o eixo azul-ciano da linha do tempo. Desloca a bolinha para a esquerda, atravessando o padding-left: 20px do container pai mais a metade da espessura da linha, caindo perfeitamente no centro do eixo vertical. */
+    top: 6px; /*Rebaixa o ponto em $6\text{px}$ para alinhar o centro da bolinha com a primeira linha de texto do evento.*/
+    width: 10px; /*Define o tamanho da figura.Cria um quadrado base de 10px X 10px.*/
+    height: 10px; /*Define o tamanho da figura.Cria um quadrado base de 10px X 10px.*/
+    border-radius: 50%; /*Transforma o quadrado em um círculo perfeito.Arredonda as quinas em $50\%$, gerando o ponto marcador da timeline.*/
+    background-color: #38bdf8; /*Faz a bolinha brilhar sobre a linha, criando um efeito visual fluido e bem acabado.*/
+}
+
+/* Ajustes de Responsividade */
+/*Ajustando o layout dos cartões da página inicial para telas médias e pequenas (como tablets na vertical e smartphones).*/
+@media (max-width: 820px) { /*O navegador só aplicará as regras contidas dentro deste bloco quando a largura da janela de exibição (viewport) for igual ou menor que 820 pixels. Em telas maiores (desktops), essas regras são ignoradas.*/
+    .home-cards-container {
+        flex-direction: column; /*Em telas grandes, os cartões ficam lado a lado (flex-direction: row). Em telas de até 820px, eles passam a ficar empilhados um embaixo do outro, evitando que o texto fique espremido lateralmente.*/
+        align-items: center;
+    }
+    .big-card {
+        width: 100%; /*Permite que o cartão ocupe a largura disponível da tela em dispositivos menores.*/
+        max-width: 450px; /* Impede que o cartão estique demais em telas intermediárias (como um tablet em $800\text{px}$), mantendo uma proporção visual elegante e confortável para leitura.*/
+    }
 }

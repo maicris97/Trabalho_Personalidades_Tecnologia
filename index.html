@@ -6,20 +6,42 @@
     <title>Os Pioneiros da Computação | Página Inicial</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body-home">
+
+    <header class="header">
         <h1>Os Pioneiros da Computação</h1>
-        <div class = "box">
-            <nav>
-                <div class="pagina_inicial">
-                    <a href="index.html" target="_blank">Página Inicial</a>
-                </div>
-                <div class = "ada">
-                    <a href="ada.html" target="_blank">Ada Lovelace</a>
-                </div>
-                <div class = "alan">
-                    <a href="alan.html" target="_blank">Alan Turing</a>
-                </div>
-            </nav>
-        </div>
+        <p class="subtitle">Conheça as mentes brilhantes que moldaram a era digital!</p>
+    </header>
+
+    <main class="home-cards-container">
+
+        <!-- CARD ADA LOVELACE -->
+        <a href="ada.html" class="big-card">
+            <div class="card-image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg" alt="Ada Lovelace">
+            </div>
+            <div class="card-content">
+                <h2>Ada Lovelace</h2>
+                <span class="badge">1815 – 1852</span>
+                <p>A primeira programadora da história. Pioneira na criação do primeiro algoritmo e na visão de que máquinas podiam ir além dos números.</p>
+                <div class="btn-card">Explorar Biografia &rarr;</div>
+            </div>
+        </a>
+
+        <!-- CARD ALAN TURING -->
+        <a href="alan.html" class="big-card">
+            <div class="card-image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg" alt="Alan Turing">
+            </div>
+            <div class="card-content">
+                <h2>Alan Turing</h2>
+                <span class="badge">1912 – 1954</span>
+                <p>O pai da ciência da computação e da Inteligência Artificial. Criador do Teste de Turing e herói da Segunda Guerra Mundial.</p>
+                <div class="btn-card">Explorar Biografia &rarr;</div>
+            </div>
+        </a>
+
+    </main>
+
 </body>
 </html>
