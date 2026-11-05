@@ -49,13 +49,19 @@ body {
     margin-bottom: 25px;
 }
 
+
 .header h1 {
     color: #38bdf8;
     font-size: 2.2rem; /*A unidade rem é relativa ao tamanho de fonte padrão do navegador (que geralmente é de 16px).2.2rem equivale a 2.2 x 16px = 35.2px*/
 }
 
+.header-ada h1{
+    color: #ffa500cc;
+    font-size: 2.2rem; /*A unidade rem é relativa ao tamanho de fonte padrão do navegador (que geralmente é de 16px).2.2rem equivale a 2.2 x 16px = 35.2px*/
+}
+
 .subtitle {
-    color: #94a3b8;
+    color: #bfd0e9;
     margin-top: 8px;
     font-size: 1.05rem;
 }
@@ -63,7 +69,7 @@ body {
 .quote {
     text-align: center;
     font-style: italic;
-    color: #cbd5e1;
+    color: #bfd0e9;
     margin-bottom: 25px;
     padding: 0 10px;
 }
@@ -88,8 +94,16 @@ body {
     transition: background-color 0.2s ease; /*Cria uma animação suave ao passar o mouse.Quando você passa o mouse por cima do botão e a cor muda no hover, essa mudança não acontece de forma seca instantânea; ela leva 0.2 segundos para deslizar suavemente (ease), tornando a navegação mais fluida.*/
 }
 
+.nav-card-ada a{
+    background-color:#ffa500cc;
+}
+
 .nav-card a:hover {
     background-color: #7dd3fc;
+}
+
+.nav-card-ada a:hover{
+    background-color: #f0a926cc;
 }
 
 /* ==========================================================
@@ -104,9 +118,8 @@ body {
     margin-top: 20px;
 }
 
-.big-card {
+.big-card{
     background-color: rgba(30, 41, 59, 0.9);
-    border: 1px solid rgba(51, 65, 85, 0.8);
     border-radius: 16px;
     width: 380px;
     text-decoration: none;
@@ -117,12 +130,20 @@ body {
     transition: transform 0.3s ease, border-color 0.3s ease; /*Prepara a animação suave para o efeito de passar o mouse.*/
 }
 
-.big-card:hover {
-    transform: translateY(-6px); /*Move o cartão para cima no eixo vertical.É uma propriedade de transformação 2D que movimenta o elemento para cima ou para baixo.Valores negativos movem para cima, então -6px faz o cartão "flutuar" 6px para cima.*/
-    border-color: #38bdf8; /*Isso cria a sensação de que o cartão "acendeu" ou ganhou foco assim que o usuário passa o mouse por cima.*/
+.big-card-ada {
+    border: 1px solid rgba(255, 165, 0, 0.8);
 }
 
-.card-image-wrapper { /*moldura*/
+.big-card-alan {
+    border: 1px solid rgba(56, 189, 248, 0.8);
+}
+
+.big-card-ada:hover , .big-card-alan:hover {
+    transform: translateY(-6px); /*Move o cartão para cima no eixo vertical.É uma propriedade de transformação 2D que movimenta o elemento para cima ou para baixo.Valores negativos movem para cima, então -6px faz o cartão "flutuar" 6px para cima.*/
+    border-color: #00ffffcc; /*Isso cria a sensação de que o cartão "acendeu" ou ganhou foco assim que o usuário passa o mouse por cima.*/
+}
+
+.card-image-wrapper{ /*moldura*/
     width: 100%;
     height: 250px;
     overflow: hidden;
@@ -133,7 +154,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; /*É uma das propriedades CSS mais úteis para imagens. O valor cover faz com que a imagem preencha todo o espaço mantendo a sua proporção original, sem achatar nem esticar a foto. Se a imagem não tiver a mesma proporção da moldura, o CSS corta suavemente as sobras nas pontas para não deformar o rosto do personagem.*/
-    object-position: top; /*Como a propriedade object-fit: cover pode cortar pedaços da imagem para ajustar ao tamanho, o object-position: top avisa ao navegador: "dê prioridade para a parte de cima da foto!". Isso é essencial para retratos de pessoas, pois garante que o rosto do personagem nunca seja cortado, mantendo o topo da cabeça sempre visível.*/
+    object-position: center 20%;
 }
 
 .card-content {
@@ -144,7 +165,6 @@ body {
 }
 
 .card-content h2 {
-    color: #38bdf8;
     font-size: 1.6rem;
     margin-bottom: 8px;
     border-bottom: none;
@@ -152,10 +172,17 @@ body {
     /*Se você tiver um estilo global no seu style.css que coloca uma borda embaixo de todos os <h2> do site, essas duas linhas "cancelam" essa borda especificamente nos títulos dos cartões da página inicial, mantendo o visual limpo.*/
 }
 
+.card-content-ada h2 {
+    color: #ffa500cc;
+}
+
+.card-content-alan h2 {
+    color: #00ffffcc;
+}
+
 .badge { /*etiquetas/tags*/
     display: inline-block;
     background-color: rgba(56, 189, 248, 0.15);
-    color: #38bdf8;
     font-size: 0.85rem;
     font-weight: bold;
     padding: 4px 12px;
@@ -164,8 +191,16 @@ body {
     margin-bottom: 15px;
 }
 
+.badge-ada {
+    color: #ffa500cc;
+}
+
+.badge-alan { 
+    color: #00ffffcc;
+}
+
 .card-content p {
-    color: #cbd5e1;
+    color: #bfd0e9;
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 20px;
@@ -173,12 +208,19 @@ body {
 }
 
 .btn-card {
-    background-color: #38bdf8;
     color: #0f172a;
     font-weight: bold;
     text-align: center;
     padding: 12px;
     border-radius: 8px;
+}
+
+.btn-card-ada {
+    background-color: #ffa500cc;
+}
+
+.btn-card-alan {
+    background-color: #00ffffcc;
 }
 
 /* ==========================================================
@@ -210,9 +252,13 @@ body {
     margin-bottom: 10px;
 }
 
+.profile-image-ada{
+    border: 3px solid #ffa500cc;
+}
+
 .image-caption {
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: #bfd0e9;
     font-style: italic;
 }
 
@@ -224,6 +270,10 @@ h2 {
     font-size: 1.4rem;
 }
 
+.card-section-ada h2{
+    color: #ffa500cc;
+}
+
 h3 {
     color: #63cae9;
     margin-top: 15px;
@@ -231,8 +281,12 @@ h3 {
     font-size: 1.1rem;
 }
 
+.card-section-ada h3{
+    color: #d49010cc;
+}
+
 p, li {
-    color: #e2e8f0;
+    color: #bfd0e9;
     font-size: 0.98rem;
 }
 
@@ -256,6 +310,10 @@ strong {
     margin-top: 15px;
 }
 
+.timeline-ada{
+    border-left: 3px solid #ffa500cc;
+}
+
 .timeline-item {
     position: relative; /*Permite que pseudo-elementos como ::before ou ::after (usados para desenhar os "pontos" ou bolinhas no eixo ciano) sejam posicionados de forma absoluta (position: absolute) com relação a este bloco específico, sem que escapem para a página inteira.*/
     margin-bottom: 20px;
@@ -271,6 +329,10 @@ strong {
     height: 10px; /*Define o tamanho da figura.Cria um quadrado base de 10px X 10px.*/
     border-radius: 50%; /*Transforma o quadrado em um círculo perfeito.Arredonda as quinas em $50\%$, gerando o ponto marcador da timeline.*/
     background-color: #38bdf8; /*Faz a bolinha brilhar sobre a linha, criando um efeito visual fluido e bem acabado.*/
+}
+
+.timeline-item-ada::before{
+    background-color:#ffa500cc;
 }
 
 /* Ajustes de Responsividade */
