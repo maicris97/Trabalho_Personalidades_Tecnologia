@@ -1,173 +1,296 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ada Lovelace | Os Pioneiros da Computação</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="body-ada">
-    <nav class="flexbox">
-        <div class="nav-card nav-card-ada"><a href="index.html">Página Inicial</a></div>
-        <div class="nav-card nav-card-ada"><a href="alan.html">Alan Turing</a></div>
+    <nav class="flexbox nav-container">
+        <div class="nav-card">
+            <a href="index.html" class="nav-btn nav-btn-home">&larr; Página Inicial</a>
+        </div>
+        <div class="nav-card">
+            <a href="alan.html" class="nav-btn nav-btn-next">Alan Turing &rarr;</a>
+        </div>
     </nav>
 
-    <header class="header header-ada">
-        <h1>Ada Lovelace</h1>
-        <p class="quote"><em>“A imaginação é a faculdade descobridora, por excelência. É ela que penetra nos mundos invisíveis ao nosso redor, os mundos da Ciência.”</em></p>
+    <header class="hero-header full-width">
+        <div class="hero-avatar">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg"
+                alt="Retrato de Ada Lovelace" class="profile-image">
+            <span class="image-caption">Retrato de Ada Lovelace</span>
+        </div>
+        <div class="hero-text">
+            <h1>Ada Lovelace</h1>
+            <p class="quote"><em>“A imaginação é a faculdade descobridora, por excelência. É ela que penetra nos mundos
+                    invisíveis ao nosso redor, os mundos da Ciência.”</em></p>
+        </div>
     </header>
 
     <main class="main-grid">
 
-        <!-- RETRATO HISTÓRICO -->
-        <section class="card-section hero-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg" alt="Retrato de Ada Lovelace" class="profile-image profile-image-ada">
-            <p class="image-caption">Ada Lovelace (1815–1852)</p>
-        </section>
-
         <!-- CONTEXTO HISTÓRICO -->
-        <section class="card-section card-section-ada">
+        <section class="card-section">
             <h2>Contexto Histórico</h2>
-            <p>Ada Lovelace nasceu em Londres, Inglaterra, em 10 de dezembro de 1815, e viveu durante o auge da Era Vitoriana e da Revolução Industrial, falecendo em 27 de novembro de 1852, aos 36 anos.</p>
+            <p>Ada Lovelace nasceu em Londres, Inglaterra, em 10 de dezembro de 1815, e viveu durante o auge da Era
+                Vitoriana e da Revolução Industrial, falecendo em 27 de novembro de 1852, aos 36 anos.</p>
 
-            <h3>Época e Lugar</h3>
-            <ul>
-                <li><strong>Local:</strong> Londres e o interior da Inglaterra, em uma sociedade aristocrática e profundamente marcada por rígidas divisões de classe e de gênero.</li>
-                <li><strong>Período Histórico:</strong> Século XIX (1815–1852). As mulheres eram proibidas de entrar em universidades, de acessar livremente bibliotecas científicas ou de publicar artigos assinados com seus próprios nomes na comunidade acadêmica.</li>
-            </ul>
+            <details>
+                <summary>Ver Contexto Detalhado &downarrow;</summary>
+                <div class="accordion-content">
+                    <h3>Época e Lugar</h3>
+                    <ul>
+                        <li><strong>Local:</strong> Londres e o interior da Inglaterra, em uma sociedade aristocrática e
+                            profundamente marcada por rígidas divisões de classe e de gênero.</li>
+                        <li><strong>Período Histórico:</strong> Século XIX (1815–1852). As mulheres eram proibidas de
+                            entrar em universidades, de acessar livremente bibliotecas científicas ou de publicar
+                            artigos assinados com seus próprios nomes na comunidade acadêmica.</li>
+                    </ul>
 
-            <h3>O Mundo da Tecnologia na Época</h3>
-            <ul>
-                <li><strong>A tecnologia era mecânica e movida a vapor:</strong> Não existiam componentes eletrônicos, transistores ou eletricidade aplicada à computação. As grandes inovações da época eram as máquinas a vapor, ferrovias, teares mecânicos e teares automáticos (como o tear de Jacquard, que usava cartões perfurados).</li>
-                <li><strong>O conceito de "computador" era humano:</strong> Naquela época, a palavra <em>computer</em> (calculista) designava pessoas — geralmente mulheres — contratadas para fazer cálculos manuais exaustivos para tabelas astronômicas e de navegação.</li>
-                <li><strong>A Máquina Analítica de Charles Babbage:</strong> O grande marco tecnológico do período foi a idealização da Máquina Analítica por Charles Babbage. Tratava-se de um projeto gigantesco de um computador mecânico de uso geral (que nunca chegou a ser construído fisicamente devido a limitações de engenharia e de financiamento da época).</li>
-                <li><strong>A visão pioneira de Ada:</strong> Enquanto Babbage via a máquina apenas como uma calculadora numérica automática, Ada Lovelace enxergou muito além. Ao traduzir um artigo sobre o projeto e adicionar extensas anotações (incluindo a "Nota G", que continha um algoritmo para calcular os números de Bernoulli), ela teorizou que a máquina poderia manipular símbolos, compor músicas e criar gráficos — antecipando em um século os princípios da computação e do software moderno.</li>
-            </ul>
+                    <h3>O Mundo da Tecnologia na Época</h3>
+                    <ul>
+                        <li><strong>A tecnologia era mecânica e movida a vapor:</strong> Não existiam componentes
+                            eletrônicos, transistores ou eletricidade aplicada à computação. As grandes inovações da
+                            época eram as máquinas a vapor, ferrovias, teares mecânicos e teares automáticos (como o
+                            tear de Jacquard, que usava cartões perfurados).</li>
+                        <li><strong>O conceito de "computador" era humano:</strong> Naquela época, a palavra
+                            <em>computer</em> (calculista) designava pessoas — geralmente mulheres — contratadas para
+                            fazer cálculos manuais exaustivos para tabelas astronômicas e de navegação.
+                        </li>
+                        <li><strong>A Máquina Analítica de Charles Babbage:</strong> O grande marco tecnológico do
+                            período foi a idealização da Máquina Analítica por Charles Babbage. Tratava-se de um projeto
+                            gigantesco de um computador mecânico de uso geral (que nunca chegou a ser construído
+                            fisicamente devido a limitações de engenharia e de financiamento da época).</li>
+                        <li><strong>A visão pioneira de Ada:</strong> Enquanto Babbage via a máquina apenas como uma
+                            calculadora numérica automática, Ada Lovelace enxergou muito além. Ao traduzir um artigo
+                            sobre o projeto e adicionar extensas anotações (incluindo a "Nota G", que continha um
+                            algoritmo para calcular os números de Bernoulli), ela teorizou que a máquina poderia
+                            manipular símbolos, compor músicas e criar gráficos — antecipando em um século os princípios
+                            da computação e do software moderno.</li>
+                    </ul>
+                </div>
+            </details>
         </section>
 
         <!-- CONTRIBUIÇÕES E PROJETOS -->
-        <section class="card-section card-section-ada">
+        <section class="card-section">
             <h2>Contribuições e Projetos</h2>
-            <h3>Principais Contribuições</h3>
-            <ul>
-                <li><strong>O primeiro algoritmo da história:</strong> Entre 1842 e 1843, ao traduzir um artigo do engenheiro Luigi Menabrea sobre a Máquina Analítica de Charles Babbage, Ada escreveu uma série de notas extensas (identificadas de A a G). Na Nota G, ela detalhou um algoritmo para calcular os números de Bernoulli na máquina.</li>
-                <li><strong>Visão além do cálculo numérico:</strong> Ela compreendeu que a Máquina Analítica não servia apenas para somar ou subtrair números, mas que poderia manipular qualquer dado representado por símbolos lógicos — antecipando que os computadores poderiam criar músicas, gráficos e textos.</li>
-                <li><strong>Conceitos pioneiros de programação:</strong> Em suas anotações, introduziu ideias fundamentais para a ciência da computação moderna, como: loops (laços de repetição), condições (estruturas de decisão) e subrotinas (funções).</li>
-            </ul>
+            <p>Pioneira na criação do primeiro algoritmo e no conceito de software para computadores de uso geral.</p>
 
-            <h3>Projetos e Estudos Notáveis</h3>
-            <ul>
-                <li><strong>A Máquina Analítica de Charles Babbage:</strong> Trabalhou em parceria com Babbage no projeto do primeiro computador mecânico de uso geral, criando a lógica de funcionamento e os cartões perfurados que programariam a máquina.</li>
-                <li><strong>Flyology (A "Fisiologia do Voo"):</strong> Na infância e juventude, em 1828, teve um fascínio precoce pela aviação e chegou a projetar planos para uma máquina voadora inspirada em anatomia de pássaros e materiais como penas e seda.</li>
-                <li><strong>A "Objeção de Lady Lovelace":</strong> Conceito citado mais tarde por Alan Turing em 1950, baseado no argumento de Ada de que a máquina analítica só é capaz de realizar aquilo que sabemos ordenar que ela faça, sem possuir originalidade própria para "pensar" por si mesma.</li>
-            </ul>
+            <details>
+                <summary>Ver Contribuições &downarrow;</summary>
+                <div class="accordion-content">
+                    <h3>Principais Contribuições</h3>
+                    <ul>
+                        <li><strong>O primeiro algoritmo da história:</strong> Entre 1842 e 1843, ao traduzir um artigo
+                            do engenheiro Luigi Menabrea sobre a Máquina Analítica de Charles Babbage, Ada escreveu uma
+                            série de notas extensas (identificadas de A a G). Na Nota G, ela detalhou um algoritmo para
+                            calcular os números de Bernoulli na máquina.</li>
+                        <li><strong>Visão além do cálculo numérico:</strong> Ela compreendeu que a Máquina Analítica não
+                            servia apenas para somar ou subtrair números, mas que poderia manipular qualquer dado
+                            representado por símbolos lógicos — antecipando que os computadores poderiam criar músicas,
+                            gráficos e textos.</li>
+                        <li><strong>Conceitos pioneiros de programação:</strong> Em suas anotações, introduziu ideias
+                            fundamentais para a ciência da computação moderna, como: loops (laços de repetição),
+                            condições (estruturas de decisão) e subrotinas (funções).</li>
+                    </ul>
 
-            <h3>Legado</h3>
-            <ul>
-                <li><strong>Linguagem de Programação Ada:</strong> Criada pelo Departamento de Defesa dos Estados Unidos na década de 1980 e homologada oficialmente em 10 de dezembro de 1980 (aniversário de Ada), batizada em sua homenagem (com o padrão militar MIL-STD-1815).</li>
-                <li><strong>Ada Lovelace Day:</strong> Celebrado internacionalmente (na segunda terça-feira de outubro) para dar visibilidade ao trabalho de mulheres nas áreas de STEM (Ciência, Tecnologia, Engenharia e Matemática).</li>
-            </ul>
+                    <h3>Projetos e Estudos Notáveis</h3>
+                    <ul>
+                        <li><strong>A Máquina Analítica de Charles Babbage:</strong> Trabalhou em parceria com Babbage
+                            no projeto do primeiro computador mecânico de uso geral, criando a lógica de funcionamento e
+                            os cartões perfurados que programariam a máquina.</li>
+                        <li><strong>Flyology (A "Fisiologia do Voo"):</strong> Na infância e juventude, em 1828, teve um
+                            fascínio precoce pela aviação e chegou a projetar planos para uma máquina voadora inspirada
+                            em anatomia de pássaros e materiais como penas e seda.</li>
+                        <li><strong>A "Objeção de Lady Lovelace":</strong> Conceito citado mais tarde por Alan Turing em
+                            1950, baseado no argumento de Ada de que a máquina analítica só é capaz de realizar aquilo
+                            que sabemos ordenar que ela faça, sem possuir originalidade própria para "pensar" por si
+                            mesma.</li>
+                    </ul>
+
+                    <h3>Legado</h3>
+                    <ul>
+                        <li><strong>Linguagem de Programação Ada:</strong> Criada pelo Departamento de Defesa dos
+                            Estados Unidos na década de 1980 e homologada oficialmente em 10 de dezembro de 1980
+                            (aniversário de Ada), batizada em sua homenagem (com o padrão militar MIL-STD-1815).</li>
+                        <li><strong>Ada Lovelace Day:</strong> Celebrado internacionalmente (na segunda terça-feira de
+                            outubro) para dar visibilidade ao trabalho de mulheres nas áreas de STEM (Ciência,
+                            Tecnologia, Engenharia e Matemática).</li>
+                    </ul>
+                </div>
+            </details>
         </section>
 
-        <!-- LINHA DO TEMPO -->
-        <section class="card-section card-section-ada">
+        <!-- LINHA DO TEMPO (Largura Total) -->
+        <section class="card-section full-width">
             <h2>Linha do Tempo</h2>
-            <div class="timeline timeline-ada">
-                <div class="timeline-item timeline-item-ada">
-                    <strong>10 de dezembro de 1815:</strong> Augusta Ada Byron nasce em Londres. É filha única do poeta Lord Byron e de Anne Isabella Milbanke.
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>10 de dezembro de 1815:</strong> Augusta Ada Byron nasce em Londres. É filha única do poeta
+                    Lord Byron e de Anne Isabella Milbanke.
                 </div>
-                <div class="timeline-item timeline-item-ada">
-                    <strong>1833:</strong> Conhece Charles Babbage em um evento social e fica fascinada pela Máquina Diferencial e pela Máquina Analítica.
+                <div class="timeline-item">
+                    <strong>1833:</strong> Conhece Charles Babbage em um evento social e fica fascinada pela Máquina
+                    Diferencial e pela Máquina Analítica.
                 </div>
-                <div class="timeline-item timeline-item-ada">
-                    <strong>8 de julho de 1835:</strong> Casa-se com William King, assumindo o título de Condessa de Lovelace.
+                <div class="timeline-item">
+                    <strong>8 de julho de 1835:</strong> Casa-se com William King, assumindo o título de Condessa de
+                    Lovelace.
                 </div>
-                <div class="timeline-item timeline-item-ada">
-                    <strong>1842–1843:</strong> Traduz o artigo de Luigi Menabrea sobre a Máquina Analítica e adiciona extensas anotações (as "Notas").
+                <div class="timeline-item">
+                    <strong>1842–1843:</strong> Traduz o artigo de Luigi Menabrea sobre a Máquina Analítica e adiciona
+                    extensas anotações (as "Notas").
                 </div>
-                <div class="timeline-item timeline-item-ada">
-                    <strong>1843:</strong> Escreve na Nota G o primeiro algoritmo da história projetado para ser processado por um computador.
+                <div class="timeline-item">
+                    <strong>1843:</strong> Escreve na Nota G o primeiro algoritmo da história projetado para ser
+                    processado por um computador.
                 </div>
-                <div class="timeline-item timeline-item-ada">
+                <div class="timeline-item">
                     <strong>27 de novembro de 1852:</strong> Morre em Londres aos 36 anos, vítima de câncer no útero.
                 </div>
             </div>
         </section>
 
         <!-- DESAFIOS -->
-        <section class="card-section card-section-ada">
+        <section class="card-section">
             <h2>Desafios</h2>
-            <p>Ada Lovelace enfrentou graves problemas de saúde física, isolamento social na infância, machismo estrutural do século XIX e o vício em apostas no fim da vida. Apesar de ser reconhecida hoje como a primeira programadora do mundo, sua trajetória foi marcada por intensos obstáculos pessoais, sociais e financeiros.</p>
+            <p>Ada Lovelace enfrentou graves problemas de saúde física, isolamento social na infância, machismo
+                estrutural do século XIX e o vício em apostas no fim da vida.</p>
 
-            <h3>Saúde e Isolamento</h3>
-            <ul>
-                <li><strong>Doenças crônicas na infância:</strong> Ada passou grande parte da infância acamada. Aos 8 anos, sofreu com dores de cabeça terríveis que afetaram sua visão. Aos 14, foi paralisada por um surto de sarampo, precisando de quase um ano de repouso absoluto para voltar a andar.</li>
-                <li><strong>Problemas de saúde mental:</strong> Ao longo da vida adulta, sofreu com crises de ansiedade, episódios de exaustão nervosa e oscilações extremas de humor, frequentemente exacerbadas pelo uso de medicamentos pesados da época (como o ópio).</li>
-            </ul>
+            <details>
+                <summary>Ver Todos os Desafios &downarrow;</summary>
+                <div class="accordion-content">
+                    <h3>Saúde e Isolamento</h3>
+                    <ul>
+                        <li><strong>Doenças crônicas na infância:</strong> Ada passou grande parte da infância acamada.
+                            Aos 8 anos, sofreu com dores de cabeça terríveis que afetaram sua visão. Aos 14, foi
+                            paralisada por um surto de sarampo, precisando de quase um ano de repouso absoluto para
+                            voltar a andar.</li>
+                        <li><strong>Problemas de saúde mental:</strong> Ao longo da vida adulta, sofreu com crises de
+                            ansiedade, episódios de exaustão nervosa e oscilações extremas de humor, frequentemente
+                            exacerbadas pelo uso de medicamentos pesados da época (como o ópio).</li>
+                    </ul>
 
-            <h3>Contexto Familiar e Social</h3>
-            <ul>
-                <li><strong>O fantasma do pai:</strong> Filha do polêmico poeta Lord Byron, Ada nunca o conheceu (ele abandonou a família quando ela tinha semanas de vida). Sua mãe, Lady Byron, era obcecada em erradicar qualquer sinal da "loucura" ou "influência poética" do pai, forçando Ada a focar obsessivamente em matemática e lógica.</li>
-                <li><strong>Machismo institucionalizado:</strong> Na Inglaterra vitoriana, as mulheres não tinham permissão para frequentar universidades, votar ou ingressar na Royal Society (a principal instituição científica da época). Ada dependia de tutores homens para obter livros e debater suas ideias acadêmicas.</li>
-            </ul>
+                    <h3>Contexto Familiar e Social</h3>
+                    <ul>
+                        <li><strong>O fantasma do pai:</strong> Filha do polêmico poeta Lord Byron, Ada nunca o conheceu
+                            (ele abandonou a família quando ela tinha semanas de vida). Sua mãe, Lady Byron, era
+                            obcecada em erradicar qualquer sinal da "loucura" ou "influência poética" do pai, forçando
+                            Ada a focar obsessivamente em matemática e lógica.</li>
+                        <li><strong>Machismo institucionalizado:</strong> Na Inglaterra vitoriana, as mulheres não
+                            tinham permissão para frequentar universidades, votar ou ingressar na Royal Society. Ada
+                            dependia de tutores homens para obter livros e debater suas ideias acadêmicas.</li>
+                    </ul>
 
-            <h3>Barreiras Científicas e Acadêmicas</h3>
-            <ul>
-                <li><strong>O ceticismo de Charles Babbage:</strong> Embora Babbage admirasse o intelecto de Ada (apelidando-a de "A Encantadora de Números"), ele frequentemente subestimava sua capacidade de compreender os aspectos práticos da Computação e tentava limitar o papel dela a uma mera assistente ou tradutora.</li>
-                <li><strong>Falta de financiamento:</strong> O governo britânico cortou as verbas para o desenvolvimento da Máquina Analítica de Babbage. Sem recursos, a máquina nunca foi construída enquanto Ada estava viva, o que impediu que seus algoritmos fossem testados na prática.</li>
-            </ul>
+                    <h3>Barreiras Científicas e Acadêmicas</h3>
+                    <ul>
+                        <li><strong>O ceticismo de Charles Babbage:</strong> Embora Babbage admirasse o intelecto de Ada
+                            (apelidando-a de "A Encantadora de Números"), ele frequentemente subestimava sua capacidade
+                            de compreender os aspectos práticos da Computação e tentava limitar o papel dela a uma mera
+                            assistente ou tradutora.</li>
+                        <li><strong>Falta de financiamento:</strong> O governo britânico cortou as verbas para o
+                            desenvolvimento da Máquina Analítica de Babbage. Sem recursos, a máquina nunca foi
+                            construída enquanto Ada estava viva, o que impediu que seus algoritmos fossem testados na
+                            prática.</li>
+                    </ul>
 
-            <h3>Declínio Financeiro e Vício</h3>
-            <ul>
-                <li><strong>Obsessão por apostas:</strong> Nos seus últimos anos, Ada tentou usar seus conhecimentos matemáticos para criar um modelo infalível de previsão de resultados em corridas de cavalos. O plano falhou desastrosamente, acumulando dívidas massivas.</li>
-                <li><strong>Chantagem e penhora:</strong> Para pagar os credores, Ada teve que penhorar as joias da família em segredo e acabou sendo chantageada por criminosos que conheceu no submundo das apostas.</li>
-            </ul>
-            <p>Ada Lovelace faleceu precocemente aos 36 anos, em 1852, vítima de um agressivo câncer de útero, agravado por tratamentos médicos equivocados (como sangrias). Seu trabalho genial permaneceu esquecido por quase um século até ser redescoberto no início da era da computação moderna.</p>
+                    <h3>Declínio Financeiro e Vício</h3>
+                    <ul>
+                        <li><strong>Obsessão por apostas:</strong> Nos seus últimos anos, Ada tentou usar seus
+                            conhecimentos matemáticos para criar um modelo infalível de previsão de resultados em
+                            corridas de cavalos. O plano falhou desastrosamente, acumulando dívidas massivas.</li>
+                        <li><strong>Chantagem e penhora:</strong> Para pagar os credores, Ada teve que penhorar as joias
+                            da família em segredo e acabou sendo chantageada por criminosos que conheceu no submundo das
+                            apostas.</li>
+                    </ul>
+                    <p>Ada Lovelace faleceu precocemente aos 36 anos, em 1852, vítima de um agressivo câncer de útero,
+                        agravado por tratamentos médicos equivocados (como sangrias). Seu trabalho genial permaneceu
+                        esquecido por quase um século até ser redescoberto no início da era da computação moderna.</p>
+                </div>
+            </details>
         </section>
 
         <!-- CONEXÃO COM OS DIAS DE HOJE -->
-        <section class="card-section card-section-ada">
+        <section class="card-section">
             <h2>Conexão com os dias de hoje</h2>
-            <p>O legado de Ada Lovelace, reconhecida como a primeira programadora do mundo, está profundamente integrado na nossa rotina tecnológica. No século XIX, ela percebeu que o "Mecanismo Analítico" de Charles Babbage não servia apenas para calcular números, mas para processar qualquer tipo de informação (como música e símbolos).</p>
+            <p>O legado de Ada Lovelace, reconhecida como a primeira programadora do mundo, está profundamente integrado
+                na nossa rotina tecnológica.</p>
 
-            <h3>O Conceito de Software e Aplicativos</h3>
-            <p>Ada foi a primeira a separar o conceito de hardware (a máquina física) do software (as instruções que dizem à máquina o que fazer).</p>
-            <ul>
-                <li><strong>Onde aparece:</strong> Sempre que você abre o Instagram, o WhatsApp ou a Netflix no seu celular. O aparelho é o metal e o vidro (o mecanismo), mas a utilidade dele vem inteiramente dos códigos criados para rodar nele — exatamente o que Ada previu.</li>
-            </ul>
+            <details>
+                <summary>Ver Aplicações Modernas &downarrow;</summary>
+                <div class="accordion-content">
+                    <h3>O Conceito de Software e Aplicativos</h3>
+                    <p>Ada foi a primeira a separar o conceito de hardware (a máquina física) do software (as instruções
+                        que dizem à máquina o que fazer).</p>
+                    <ul>
+                        <li><strong>Onde aparece:</strong> Sempre que você abre o Instagram, o WhatsApp ou a Netflix no
+                            seu celular. O aparelho é o metal e o vidro (o mecanismo), mas a utilidade dele vem
+                            inteiramente dos códigos criados para rodar nele — exatamente o que Ada previu.</li>
+                    </ul>
 
-            <h3>Mídias Digitais e Streaming</h3>
-            <p>Babbage via sua máquina como uma calculadora gigante. Ada foi além: ela escreveu que a máquina poderia criar músicas de qualquer grau de complexidade ou expressar gráficos se a ciência da computação fosse aplicada a isso.</p>
-            <ul>
-                <li><strong>Onde aparece:</strong> No Spotify, no YouTube e em imagens digitais. A conversão de sons, pixels e cores em dados binários (zeros e uns) para que um processador os transforme em arte é a concretização direta da imaginação de Ada.</li>
-            </ul>
+                    <h3>Mídias Digitais e Streaming</h3>
+                    <p>Babbage via sua máquina como uma calculadora gigante. Ada foi além: ela escreveu que a máquina
+                        poderia criar músicas de qualquer grau de complexidade ou expressar gráficos se a ciência da
+                        computação fosse aplicada a isso.</p>
+                    <ul>
+                        <li><strong>Onde aparece:</strong> No Spotify, no YouTube e em imagens digitais. A conversão de
+                            sons, pixels e cores em dados binários (zeros e uns) para que um processador os transforme
+                            em arte é a concretização direta da imaginação de Ada.</li>
+                    </ul>
 
-            <h3>Algoritmos e Loops (Laços de Repetição)</h3>
-            <p>Para calcular os Números de Bernoulli, Ada criou um diagrama que continha o primeiro loop de repetição da história (instruções que se repetem automaticamente até que uma condição seja cumprida).</p>
-            <ul>
-                <li><strong>Alarmes:</strong> O despertador do seu celular que toca de 5 em 5 minutos na função "soneca".</li>
-                <li><strong>Autenticação:</strong> Quando você erra a senha do banco e o sistema diz: "Senha incorreta. Tente novamente" (um loop que se repete até você acertar ou ser bloqueado).</li>
-                <li><strong>Automação:</strong> Robôs industriais ou e-mails de "boas-vindas" que são enviados automaticamente sempre que um novo usuário se cadastra.</li>
-            </ul>
+                    <h3>Algoritmos e Loops (Laços de Repetição)</h3>
+                    <p>Para calcular os Números de Bernoulli, Ada criou um diagrama que continha o primeiro loop de
+                        repetição da história (instruções que se repetem automaticamente até que uma condição seja
+                        cumprida).</p>
+                    <ul>
+                        <li><strong>Alarmes:</strong> O despertador do seu celular que toca de 5 em 5 minutos na função
+                            "soneca".</li>
+                        <li><strong>Autenticação:</strong> Quando você erra a senha do banco e o sistema diz: "Senha
+                            incorreta. Tente novamente" (um loop que se repete até você acertar ou ser bloqueado).</li>
+                        <li><strong>Automação:</strong> Robôs industriais ou e-mails de "boas-vindas" que são enviados
+                            automaticamente sempre que um novo usuário se cadastra.</li>
+                    </ul>
 
-            <h3>Inteligência Artificial (A "Objeção de Ada")</h3>
-            <p>Ada Lovelace escreveu que a máquina “não tem a pretensão de originar nada. Ela pode fazer o que soubermos ordenar que ela faça”. Esse argumento é debatido até hoje por cientistas de dados sob o nome de "Objeção de Ada" (Ada's Objection).</p>
-            <ul>
-                <li><strong>Onde aparece:</strong> Nas discussões sobre o ChatGPT e outras IAs. Quando debatemos se a inteligência artificial realmente "pensa" por conta própria ou se apenas processa padrões com base nos dados que nós fornecemos, estamos usando o mesmíssimo questionamento que Ada levantou há quase 200 anos.</li>
-            </ul>
+                    <h3>Inteligência Artificial (A "Objeção de Ada")</h3>
+                    <p>Ada Lovelace escreveu que a máquina “não tem a pretensão de originar nada. Ela pode fazer o que
+                        soubermos ordenar que ela faça”. Esse argumento é debatido até hoje por cientistas de dados sob
+                        o nome de "Objeção de Ada" (Ada's Objection).</p>
+                    <ul>
+                        <li><strong>Onde aparece:</strong> Nas discussões sobre o ChatGPT e outras IAs. Quando debatemos
+                            se a inteligência artificial realmente "pensa" por conta própria ou se apenas processa
+                            padrões com base nos dados que nós fornecemos, estamos usando o mesmíssimo questionamento
+                            que Ada levantou há quase 200 anos.</li>
+                    </ul>
+                </div>
+            </details>
         </section>
 
-        <!-- CURIOSIDADES -->
-        <section class="card-section card-section-ada">
+        <!-- CURIOSIDADES (Largura Total) -->
+        <section class="card-section full-width">
             <h2>Curiosidades</h2>
             <ul>
-                <li><strong>Criação sob vigilância rigorosa:</strong> Sua mãe, Lady Byron, temia que Ada herdasse a "insanidade" e os excessos poéticos de seu pai, o famoso poeta Lord Byron. Para evitar isso, sua mãe a forçou a estudar matemática e ciências desde os 4 anos de idade, tentando reprimir qualquer inclinação artística.</li>
-                <li><strong>Uma mistura de ciência e imaginação:</strong> Apesar da educação rígida, Ada manteve um espírito criativo. Ela chamava seu próprio método de trabalho de "ciência poética", o que a ajudava a enxergar as possibilidades abstratas e artísticas da tecnologia que os cientistas puramente lógicos da época não conseguiam ver.</li>
-                <li><strong>Obsessão por voar na infância:</strong> Aos 12 anos, Ada decided que queria voar. Ela abordou o problema de forma científica: estudou a anatomia dos pássaros, testou diferentes materiais para construir asas (como papel e seda) e até escreveu um livro ilustrado chamado Flyology (Voologia), detalhando suas descobertas.</li>
+                <li><strong>Criação sob vigilância rigorosa:</strong> Sua mãe, Lady Byron, temia que Ada herdasse a
+                    "insanidade" e os excessos poéticos de seu pai, o famoso poeta Lord Byron. Para evitar isso, sua mãe
+                    a forçou a estudar matemática e ciências desde os 4 anos de idade, tentando reprimir qualquer
+                    inclinação artística.</li>
+                <li><strong>Uma mistura de ciência e imaginação:</strong> Apesar da educação rígida, Ada manteve um
+                    espírito criativo. Ela chamava seu próprio método de trabalho de "ciência poética", o que a ajudava
+                    a enxergar as possibilidades abstratas e artísticas da tecnologia que os cientistas puramente
+                    lógicos da época não conseguiam ver.</li>
+                <li><strong>Obsessão por voar na infância:</strong> Aos 12 anos, Ada decided que queria voar. Ela
+                    abordou o problema de forma científica: estudou a anatomia dos pássaros, testou diferentes materiais
+                    para construir asas (como papel e seda) e até escreveu um livro ilustrado chamado Flyology
+                    (Voologia), detalhando suas descobertas.</li>
             </ul>
         </section>
 
     </main>
 
 </body>
+
 </html>
