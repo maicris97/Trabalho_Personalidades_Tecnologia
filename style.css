@@ -7,11 +7,11 @@
     padding: 0;
 }
 
-:root {
-    --primary-color: #38bdf8;
-    --primary-hover: #7dd3fc;
-    --border-color: rgba(51, 65, 85, 0.8);
-    --card-bg: rgba(30, 41, 59, 0.85);
+:root { /*elemento principal de toda a página*/
+    --primary-color: #38bdf8; /*cor principal do site*/
+    --primary-hover: #7dd3fc; /*Guarda a cor que será exibida quando o usuário passar o mouse por cima de um botão ou link.*/
+    --border-color: rgba(51, 65, 85, 0.8); /*Define a cor padrão para as linhas de borda dos cartões e caixas.*/
+    --card-bg: rgba(30, 41, 59, 0.85); /*Define a cor de fundo (background) dos cartões e do cabeçalho.*/
 }
 
 body {
@@ -32,10 +32,10 @@ body {
 body.body-home {
     background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
                       url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80');
-    min-height: 100vh;
+    min-height: 100vh; /*Define a altura mínima do corpo da página como 100% da altura da tela visualizada pelo usuário*/
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /*Como o alinhamento está em coluna (flex-direction: column), esta propriedade centraliza todo o bloco de conteúdo na vertical (no meio do eixo Y).*/
 }
 
 body.body-ada {
@@ -64,7 +64,7 @@ body.body-alan {
     border-radius: 12px;
     padding: 25px 15px;
     margin-bottom: 25px;
-    box-shadow: 0 0 15px rgba(56,189,248,0.15);
+    box-shadow: 0 0 15px rgba(56,189,248,0.15); /*Aplica uma sombra externa azulada ao redor da caixa. 15px: Raio de desfoque (blur) — quanto maior o valor, mais "suave" e espalhada fica a névoa de luz.*/
 }
 
 body.body-home .header {
@@ -88,7 +88,7 @@ body.body-home .header {
 /* Menu de botões para Ada e Alan */
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*Distribui o espaço horizontal entre os elementos filhos.*/
     align-items: center;
     width: 100%;
     margin-bottom: 25px;
@@ -111,8 +111,8 @@ body.body-home .header {
     color: var(--primary-color);
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(8px);
+    transition: all 0.3s ease; /*Prepara a animação suave de 0.3 segundos para qualquer mudança no botão (como quando o usuário passa o cursor por cima no :hover).*/
+    backdrop-filter: blur(8px); /*Aplica um efeito de desfoque (blur) de 8 pixels no fundo que está logo atrás do botão.*/
 }
 
 .nav-btn:hover {
@@ -122,7 +122,7 @@ body.body-home .header {
 }
 
 .nav-btn-home:hover {
-    transform: translateX(-4px);
+    transform: translateX(-4px); /*Utiliza a propriedade de transformação CSS para mover o botão no eixo X (horizontal). O sinal negativo (-) indica movimento para a esquerda.*/
 }
 
 .nav-btn-next:hover {
@@ -141,7 +141,7 @@ body.body-home .header {
 }
 
 .hero-avatar {
-    flex-shrink: 0;
+    flex-shrink: 0; /*Impede que o container da imagem diminua de tamanho dentro do modelo Flexbox. Quando a tela reduz de tamanho ou a citação de texto da direita for muito longa, o Flexbox tenta "apertar" os elementos. O flex-shrink: 0; protege a foto de perfil, garantindo que ela nunca seja esmagada ou distorcida, mantendo sempre as suas dimensões exatas*/
     text-align: center;
 }
 
@@ -165,7 +165,7 @@ body.body-home .header {
 }
 
 .hero-text {
-    flex-grow: 1;
+    flex-grow: 1; /*Enquanto a foto (.hero-avatar) tem flex-shrink: 0 para manter o seu tamanho fixo sem encolher, o flex-grow: 1 faz o bloco de texto se expandir para ocupar toda a largura que sobrou.*/
     text-align: left;
 }
 
@@ -309,15 +309,15 @@ body.body-home .header {
    ESTILOS DAS PÁGINAS DA ADA E DO ALAN
    ========================================================== */
 .main-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* perguntar */
+    display: grid; /*Diferente do Flexbox (que lida melhor com elementos em uma única linha ou coluna), o CSS Grid permite criar estruturas bidimensionais perfeitas de linhas e colunas.*/
+    grid-template-columns: repeat(2, 1fr); /*Define a estrutura de colunas do layout. repeat(2, ...): Cria 2 colunas.1fr (fraction): Cada coluna ocupa 1 fração igual do espaço disponível.*/
     gap: 20px;
     width: 100%;
     align-items: stretch;
 }
 
 .full-width{
-    grid-column: 1/ -1; /* perguntar */
+    grid-column: 1/ -1; /*Define onde o elemento começa e onde termina no eixo de colunas do CSS Grid. 1: O elemento começa na primeira linha de coluna (borda esquerda da grelha).-1: O elemento vai até a última linha de coluna (borda direita da grelha), independentemente de quantas colunas o grid possua.*/
 }
 
 .card-section {
@@ -327,7 +327,7 @@ body.body-home .header {
     padding: 28px;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* perguntar */
+    flex-direction: column; /*transforma o cartão num container Flexbox orientando o fluxo de seus elementos internos de cima para baixo (em coluna vertical).*/
  
 }
 
@@ -344,21 +344,21 @@ h3 {
     margin-top: 15px;
     margin-bottom: 10px;
     font-size: 1.1rem;
-    filter: brightness(1.2); /* perguntar */
+    filter: brightness(1.2); /*Aplica um filtro CSS que aumenta o brilho da cor do elemento em $20\%$ (multiplicando os canais de cor por 1.2). O filtro eleva a luminescência da cor tema (--primary-color), fazendo o <h3> saltar aos olhos com um efeito neon mais destacado sobre o fundo escuro, sem precisar criar uma nova variável no CSS só para esse tom de cor.*/
 }
 
-.card-section > p{
+.card-section > p{ /*seletor de filho direto*/
     color: #e2e8f0;
     font-size: 1.05rem;
     line-height: 1.6;
     margin-bottom: 15px;
-    flex-grow: 1;
+    flex-grow: 1; /*Como o cartão pai (.card-section) tem display: flex; flex-direction: column;, se um cartão tiver menos texto do que o cartão vizinho na mesma linha do .main-grid, este flex-grow: 1 faz o parágrafo absorver a altura que sobra. Isso empurra automaticamente os elementos seguintes para o rodapé exato do cartão, mantendo simetria vertical perfeita entre os cartões da grelha.*/
 }
 
 p, li {
     color: #bfd0e9;
     font-size: 0.98rem;
-    line-height: 1.6; /* perguntar */
+    line-height: 1.6; /*Evita que os olhos do leitor se percam ao saltar de uma linha para a outra, sendo a medida recomendada pelas diretrizes globais de acessibilidade (WCAG) para garantir leitura fluida.*/
 }
 
 ul {
@@ -374,8 +374,8 @@ strong {
     color: #ffffff;
 }
 
-details{ /*perguntar*/
-    margin-top: auto;
+details{
+    margin-top: auto; /*Aproveita o modelo Flexbox do container pai (.card-section, que tem display: flex; flex-direction: column;) para absorver todo o espaço vertical restante acima dele.*/
     width: 100%;
 }
 
@@ -383,35 +383,35 @@ summary {
     color: var(--primary-color);
     font-weight: bold;
     font-size: 1rem;
-    cursor: pointer;
+    cursor: pointer; /*: Altera o ponteiro do mouse para a mãozinha de clique ao passar sobre a barra.*/
     padding: 10px 15px;
     background-color: rgba(15, 23, 42, 0.6);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    list-style: none;
+    list-style: none; /*Remove a seta/triângulo cinza padrão que os navegadores exibem por padrão na tag <summary>.*/
     text-align: center;
     transition: all 0.2s ease;
 }
 
-summary::-webkit-details-marker{/*perguntar*/
+summary::-webkit-details-marker{/*pseudo-elemento proprietário dos navegadores baseados no motor WebKit/Blink (como Google Chrome, Microsoft Edge, Opera e Safari).*/
     display: none;
 }
 
-summary:hover{/*perguntar*/
+summary:hover{
     background-color: var(--primary-hover);
     color: #0f172a;
 }
 
-.accordion-content{/*perguntar*/
+.accordion-content{
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 1px dashed var(--border-color);
+    border-top: 1px dashed var(--border-color); /*pontilhado/tracejado (dashed)*/
     animation: fadeIn 0.3s ease;
 }
 
-@keyframes fadeIn{/*perguntar*/
-    from{ opacity: 0; transform: translateY(-5px); }
-    to{ opacity: 1; transform: translateY(0); }
+@keyframes fadeIn{/*A regra @keyframes é a ferramenta do CSS usada para criar quadros de animação personalizados.*/
+    from{ opacity: 0; transform: translateY(-5px); } /*opacity: 0;: Torna o conteúdo 100% invisível/transparente.transform: translateY(-5px);: Desloca o conteúdo 5 pixels para cima no eixo vertical (Y).*/
+    to{ opacity: 1; transform: translateY(0); } /*opacity: 1;: Torna o conteúdo 100% visível/opaco.transform: translateY(0);: Retorna o conteúdo à sua posição original de layout.*/
 }
 
 /* Linha do Tempo */
